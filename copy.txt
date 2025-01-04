@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Python Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#menu">Menu</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="home">Terrible Coffee Co.</h1>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a local Long Island based coffee company, who's been in business for 4 months ! We take pride in recycling,
+        so we make sure to always re-use our coffee filters! We even go as far as to not wash 50%
+        of our mugs. This is so we don't waste water, plus we could never offer our fan favorite
+        $1 seasoned mug special! We take pride in receiving a C- grade from the health inspector! Much better
+        than previous years!</p>
+    </section>
+    <section id="menut">
+        <h2>Menu</h2>
+        <p>If you want to shame us for our terrible coffee, here's where you do it.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you want to shame us for our terrible coffee, here's where you do it.</p>
+    </section>
+</section>
+</body>
+</html>

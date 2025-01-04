@@ -1,0 +1,90 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    /* Base styles for the nav */
+    background-color: #c28042;
+    padding: 10px 0;
+    width: 100%;
+    text-align: right; /* Aligns the text to the right */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Keeps ul in line with the text alignment */
+}
+
+nav ul li {
+    display: inline; /* Makes list items display inline */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px; /* Adds space around each link */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Optional: Hover effect for links */
+nav ul li a:hover {
+    color: #ddd;
+}
+
+.container {
+    /* Path to your image */
+    background-image: url('images/badcoffeeco1.jpg');
+
+    /* Ensures the image covers the entire container */
+    background-size: cover;
+
+    /* Centers the background image */
+    background-position: center;
+
+    /* Prevents the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Sets the height; adjust as needed */
+    height: 100vh; /* Full viewport height */
+
+    /* Flexbox to center the text-box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    /* Tan background for the text box */
+    background-color: #cfc7bc;
+
+    /* Padding inside the box */
+    padding: 20px;
+
+    /* Center-align text inside the box */
+    text-align: center;
+
+    /* Box dimensions - adjust as needed */
+    width: 80%; /* You might want to adjust this based on your content */
+    max-width: 600px; /* Prevents the box from getting too wide on large screens */
+
+    /* Remove any potential margin */
+    margin: 0;
+
+    /* Text color for visibility against tan background */
+    color: #333; /* Dark text for contrast */
+}
+
+h1, p {
+    /* Ensure text appears above the background */
+    position: relative;
+    z-index: 1;
+
+    /* Text shadow for better readability if needed */
+    text-shadow: none; /* Removed since it's not needed with tan background */
+}
