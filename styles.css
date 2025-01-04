@@ -80,10 +80,14 @@ nav ul li a:hover {
     color: #333; /* Dark text for contrast */
 }
 
-h1, p {
-    /* Ensure text appears above the background */
-    position: relative;
-    z-index: 1;
+h1 {
+    /* Base styles for the nav */
+    background-color: #c28042;
+    padding: 5px 0;
+    width: 100%;
+    text-align: left;
+    color: white
+     }
 
     /* Text shadow for better readability if needed */
     text-shadow: none; /* Removed since it's not needed with tan background */
