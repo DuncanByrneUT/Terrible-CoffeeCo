@@ -1,39 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Python Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#menu">Menu</a></li>
-        </ul>
-    </nav>
+/* styles.css */
 
-    <h1 id="home">Terrible Coffee Co.</h1>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a local Long Island based coffee company, who's been in business for 4 months ! We take pride in recycling,
-        so we make sure to always re-use our coffee filters! We even go as far as to not wash 50%
-        of our mugs. This is so we don't waste water, plus we could never offer our fan favorite
-        $1 seasoned mug special! We take pride in receiving a C- grade from the health inspector! Much better
-        than previous years!</p>
-    </section>
-    <section id="menut">
-        <h2>Menu</h2>
-        <p>If you want to shame us for our terrible coffee, here's where you do it.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you want to shame us for our terrible coffee, here's where you do it.</p>
-    </section>
-</section>
-</body>
-</html>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    /* Base styles for the nav */
+    background-color: #c28042;
+    padding: 10px 0;
+    width: 100%;
+    text-align: right; /* Aligns the text to the right */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Keeps ul in line with the text alignment */
+}
+
+nav ul li {
+    display: inline; /* Makes list items display inline */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px; /* Adds space around each link */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Optional: Hover effect for links */
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* background image*/
+.container {
+    /* Path to your image */
+    background-image: url('images/badcoffeeco1.jpg');
+
+    /* Ensures the image covers the entire container */
+    background-size: cover;
+
+    /* Centers the background image */
+    background-position: center;
+
+    /* Prevents the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Sets the height; adjust as needed */
+    height: 100vh; /* Full viewport height */
+
+    /* Flexbox to center the text-box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    /* Tan background for the text box */
+    background-color: #cfc7bc;
+
+    /* Padding inside the box */
+    padding: 20px;
+
+    /* Center-align text inside the box */
+    text-align: center;
+
+    /* Box dimensions - adjust as needed */
+    width: 80%; /* You might want to adjust this based on your content */
+    max-width: 600px; /* Prevents the box from getting too wide on large screens */
+
+    /* Remove any potential margin */
+    margin: 0;
+
+    /* Text color for visibility against tan background */
+    color: #333; /* Dark text for contrast */
+}
+
+
+h1 {
+    /* Company name top left */
+    background-color: #c28042;
+    padding: 5px 0;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: white
+
+     }
+
+    /* Text shadow for better readability if needed */
+    text-shadow: none; /* Removed since it's not needed with tan background */
+}
+
+/* iamges within the text box */
+.menu-image {
+  /* Control the maximum width of images */
+  max-width: 100%; /* Ensures images don't exceed their container's width */
+  width: 50%; /* Adjust this percentage for how large you want the images relative to their container */
+  height: auto; /* Keeps aspect ratio */
+  display: block; /* Makes the image behave like a block element for easier centering */
+  margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* If you want to control the size of each image individually */
+#home .text-box img:first-child {
+  width: 50%; /* Example size for Gus Coffeeman image */
+}
+
+#home .text-box img:nth-child(3) {
+  width: 40%; /* Example size for the Terrible Coffee Co. exterior image */
+}
+
+#home .text-box img:last-child {
+  width: 35%; /* Example size for the Disgusted customer image */
+}
+
+
+/* Control the maximum width of images */
+
+#home {
+  position: relative; /* Allows absolute positioning of children */
+}
+
+.menu-image {
+  max-width: 100%; /* Ensures images don't exceed their container's width */
+  height: auto; /* Keeps aspect ratio */
+}
+
+#home > .menu-image {
+  position: absolute;
+  top: 0; /* Position at the top of the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Actually center the image */
+  max-width: 300px; /* Example size, adjust as needed */
+  z-index: 1; /* Places image above the background but below other content if needed */
+}
+
+.text-box {
+  position: relative; /* Allows z-index to work */
+  z-index: 2; /* Ensures text box is above the Gus image */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text readability */
+  margin-top: 200px; /* Space for the image at the top, adjust based on image size */
+  padding: 20px;
+  max-width: 800px; /* Adjust as needed */
+  margin-left: auto;
+  margin-right: auto; /* Center the text box */
+}

@@ -1,16 +1,17 @@
-/* styles.css */
-
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding:;
 }
+
+/* Nav styles remain the same */
 nav {
     /* Base styles for the nav */
     background-color: #c28042;
     padding: 10px 0;
     width: 100%;
-    text-align: right; /* Aligns the text to the right */
+    text-align: left; /* Aligns the text to the right */
+    color: white;
 }
 
 nav ul {
@@ -37,117 +38,55 @@ nav ul li a:hover {
     color: #ddd;
 }
 
-/* background image*/
+/* General container style for all sections */
 .container {
-    /* Path to your image */
     background-image: url('images/badcoffeeco1.jpg');
-
-    /* Ensures the image covers the entire container */
     background-size: cover;
-
-    /* Centers the background image */
     background-position: center;
-
-    /* Prevents the image from repeating */
     background-repeat: no-repeat;
-
-    /* Sets the height; adjust as needed */
-    height: 100vh; /* Full viewport height */
-
-    /* Flexbox to center the text-box */
+    height: 100vh; /* Full viewport height for each section */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.text-box {
-    /* Tan background for the text box */
-    background-color: #cfc7bc;
-
-    /* Padding inside the box */
+/* Specific styles for home section */
+#home .text-box {
+    background-color: rgba(207, 199, 188, 0.8); /* Semi-transparent tan */
     padding: 20px;
-
-    /* Center-align text inside the box */
     text-align: center;
-
-    /* Box dimensions - adjust as needed */
-    width: 80%; /* You might want to adjust this based on your content */
-    max-width: 600px; /* Prevents the box from getting too wide on large screens */
-
-    /* Remove any potential margin */
-    margin: 0;
-
-    /* Text color for visibility against tan background */
-    color: #333; /* Dark text for contrast */
+    width: 80%;
+    max-width: 600px;
+    position: relative; /* To position Gus's image absolutely within this */
+    color: #333;
 }
 
-
-h1 {
-    /* Company name top left */
-    background-color: #c28042;
-    padding: 5px 0;
-    width: 100%;
-    text-align: left;
-    font-weight: bold;
-    color: white
-
-     }
-
-    /* Text shadow for better readability if needed */
-    text-shadow: none; /* Removed since it's not needed with tan background */
+#home .gus-image {
+    position: absolute;
+    top: 200px; /* Adjust this value based on how much you want the image to overlap the text */
+    right: 35%;
+    transform: translateX(10%);
+    max-width: 500px; /* Adjust size as needed */
+    z-index: 1; /* Above text */
 }
 
-/* iamges within the text box */
-.menu-image {
-  /* Control the maximum width of images */
-  max-width: 100%; /* Ensures images don't exceed their container's width */
-  width: 50%; /* Adjust this percentage for how large you want the images relative to their container */
-  height: auto; /* Keeps aspect ratio */
-  display: block; /* Makes the image behave like a block element for easier centering */
-  margin: 0 auto 20px; /* Center the image and add some space below */
+#home p {
+    position: relative; /* Allows z-index to work */
+    z-index: 0; /* Below image */
 }
 
-/* If you want to control the size of each image individually */
-#home .text-box img:first-child {
-  width: 50%; /* Example size for Gus Coffeeman image */
+/* Styles for other sections (menu, contact, testimonials) */
+#menu, #contact, #testimonials {
+    /* You can customize these sections differently if needed */
 }
 
-#home .text-box img:nth-child(3) {
-  width: 40%; /* Example size for the Terrible Coffee Co. exterior image */
+#menu .text-box, #contact .text-box, #testimonials .text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    color: #333;
 }
 
-#home .text-box img:last-child {
-  width: 35%; /* Example size for the Disgusted customer image */
-}
-
-
-/* Control the maximum width of images */
-
-#home {
-  position: relative; /* Allows absolute positioning of children */
-}
-
-.menu-image {
-  max-width: 100%; /* Ensures images don't exceed their container's width */
-  height: auto; /* Keeps aspect ratio */
-}
-
-#home > .menu-image {
-  position: absolute;
-  top: 0; /* Position at the top of the container */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Actually center the image */
-  max-width: 300px; /* Example size, adjust as needed */
-  z-index: 1; /* Places image above the background but below other content if needed */
-}
-
-.text-box {
-  position: relative; /* Allows z-index to work */
-  z-index: 2; /* Ensures text box is above the Gus image */
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text readability */
-  margin-top: 200px; /* Space for the image at the top, adjust based on image size */
-  padding: 20px;
-  max-width: 800px; /* Adjust as needed */
-  margin-left: auto;
-  margin-right: auto; /* Center the text box */
-}
+/* Additional styles for different sections if needed */
