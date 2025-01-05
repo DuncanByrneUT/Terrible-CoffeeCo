@@ -62,6 +62,7 @@ nav {
     order: 3; /* Position the image at the bottom */
     margin-top: 20px; /* Space between text and image */
     max-height: 30vh; /* Adjust the height to be 30% of the viewport height */
+    margin-bottom: 20px; /* Space between image and text */
     width: 80; /* Ensure the width adjusts to maintain aspect ratio */
     object-fit: contain; /* Keep the image's aspect ratio, might crop if necessary */
 }
@@ -73,6 +74,32 @@ nav {
     max-width: 800px; /* Maximum width for the box */
     padding: 40px 20px; /* Increase padding for height */
     margin: 0 auto; /* Center the box */
+    font-size: 1.5em; /* Increase font size for better readability */
+    line-height: 1.6; /* Better line spacing for readability */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+
+/* Menu section */
+.menu-image {
+    order: 1; /* Position the image at the top */
+    margin-bottom: 20px; /* Space between image and text */
+    max-height: 30vh; /* Adjust the height to be 30% of the viewport height */
+    margin-top: 20px;
+    width: auto; /* Ensure the width adjusts to maintain aspect ratio */
+    object-fit: contain; /* Keep the image's aspect ratio, might crop if necessary */
+
+}
+
+.text-box-menu {
+    order: 2; /* Position the text in the middle */
+    background-color: rgba(207, 199, 188, 0.8); /* Semi-transparent tan background */
+    width: 75%; /* Adjust width to be less than full page */
+    max-width: 800px; /* Maximum width for the box */
+    padding: 40px 20px; /* Increase padding for height */
+    margin: 0 auto; /* Center the box */
+    margin-top: 250px;
     font-size: 1.5em; /* Increase font size for better readability */
     line-height: 1.6; /* Better line spacing for readability */
     text-align: center; /* Center the text */
