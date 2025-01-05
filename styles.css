@@ -5,7 +5,7 @@ body {
 
 nav {
     background-color: #b07531;
-    padding: 10px 0;
+    padding: 15px 0;
     color: #e8d8c5;
 }
 
@@ -30,12 +30,14 @@ nav {
     text-decoration: underline;
 }
 
+/* background image coffee cups */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Space items evenly along the main axis */
     align-items: center; /* Center items horizontally */
     height: 100vh; /* Full viewport height */
+
     background-image: url('images/badcoffeeco1.jpg');
     background-size: cover;
     background-position: center;
@@ -50,22 +52,24 @@ nav {
     order: 1; /* Position the image at the top */
     margin-bottom: 20px; /* Space between image and text */
     max-height: 30vh; /* Adjust the height to be 30% of the viewport height */
+    margin-top: 20px;
     width: auto; /* Ensure the width adjusts to maintain aspect ratio */
     object-fit: contain; /* Keep the image's aspect ratio, might crop if necessary */
+
 }
 
 .shop-image {
     order: 3; /* Position the image at the bottom */
     margin-top: 20px; /* Space between text and image */
     max-height: 30vh; /* Adjust the height to be 30% of the viewport height */
-    width: auto; /* Ensure the width adjusts to maintain aspect ratio */
+    width: 80; /* Ensure the width adjusts to maintain aspect ratio */
     object-fit: contain; /* Keep the image's aspect ratio, might crop if necessary */
 }
 
 .text-box {
     order: 2; /* Position the text in the middle */
     background-color: rgba(207, 199, 188, 0.8); /* Semi-transparent tan background */
-    width: 60%; /* Adjust width to be less than full page */
+    width: 75%; /* Adjust width to be less than full page */
     max-width: 800px; /* Maximum width for the box */
     padding: 40px 20px; /* Increase padding for height */
     margin: 0 auto; /* Center the box */
