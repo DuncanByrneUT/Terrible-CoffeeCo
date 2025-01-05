@@ -105,3 +105,17 @@ nav {
     text-align: center; /* Center the text */
     border-radius: 10px; /* Optional: adds rounded corners */
 }
+
+.text-box-contact {
+    order: 2; /* Position the text in the middle */
+    background-color: rgba(207, 199, 188, 0.8); /* Semi-transparent tan background */
+    width: 75%; /* Adjust width to be less than full page */
+    max-width: 800px; /* Maximum width for the box */
+    padding: 40px 20px; /* Increase padding for height */
+    margin: 0 auto; /* Center the box */
+    margin-top: 250px;
+    font-size: 1.5em; /* Increase font size for better readability */
+    line-height: 1.6; /* Better line spacing for readability */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
